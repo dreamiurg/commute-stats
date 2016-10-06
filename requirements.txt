@@ -1,0 +1,16 @@
+arrow==0.8.0
+cairocffi==0.7.2
+CairoSVG==1.0.22
+cffi==1.8.3
+cssselect==0.9.2
+geopy==1.11.0
+lxml==3.6.4
+numpy==1.11.2
+pandas==0.19.0
+pycparser==2.14
+pygal==2.3.0
+python-dateutil==2.5.3
+pytz==2016.7
+simplejson==3.8.2
+six==1.10.0
+tinycss==0.4
