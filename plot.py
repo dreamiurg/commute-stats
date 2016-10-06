@@ -5,7 +5,7 @@ import pygal
 
 
 def plot_duration(df, filename):
-    chart = pygal.Box(title='Commute duration', y_title='Minutes', show_legend=False)
+    chart = pygal.Box(title='Commute duration', y_title='Minutes', show_legend=False, width=600, height=400)
     chart.x_labels = ['Home to work', 'Work to home']
     chart.add('Home to work', df['duration_s'][df['label'] == 'work'].values / 60)
     chart.add('Work to home', df['duration_s'][df['label'] == 'home'].values / 60)
@@ -36,7 +36,7 @@ def plot_duration_by_day_of_week(df, label, filename):
 
         durations_by_day_of_week[day_of_week].append(t[1] / 60)
 
-    chart = pygal.Box(title='Commute to %s duration, by day of week' % (label), y_title='min', show_legend=False)
+    chart = pygal.Box(title='Commute to %s duration, by day of week' % (label), y_title='min', show_legend=False, width=600, height=400)
     l = arrow.locales.EnglishLocale()
     chart.x_labels = map(lambda d: l.day_name(d + 1), durations_by_day_of_week.keys())
     for (day_of_week, durations) in durations_by_day_of_week.iteritems():
